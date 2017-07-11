@@ -2,7 +2,7 @@
 	<div class="navbar">
 		<div class="navbar-box">
 			<div class="item-box">
-				<router-link class="item" to="/msg"><span class="icon_msg">客户回访</span></router-link>
+				<router-link class="item" to="/message"><span class="icon_msg">客户回访</span></router-link>
 				<router-link class="item" to="/home"><span class="icon_home">主页</span></router-link>
 				<router-link class="item" to="/rss"><span class="icon_rss">信息平台</span></router-link>
 			</div>
@@ -17,6 +17,7 @@
 		bottom: 0;
 		height: 1.1rem;
 		background: #fff;
+		box-shadow: 0 -0.05rem 0.1rem #e4f2fb;
 		.navbar-box{
 			position: absolute;
 			left: 0;

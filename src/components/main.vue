@@ -1,37 +1,31 @@
 <template>
-  <div class="main">
-    <div class="container">
-      <transition name="fade">
-        <router-view></router-view>
-      </transition>
-    </div>
-    <v-navbar></v-navbar>
-  </div>
+    <yd-layout>
+        <transition name="fade" mode="out-in">
+          <router-view></router-view>
+        </transition>
+        <div slot="tabbar">
+          <v-navbar></v-navbar>
+        </div>
+    </yd-layout>
 </template>
 
 <script>
-import navbar from '@/components/common/navbar'
-export default {
-  name: 'main',
-  data () {
-    return {
+  import navbar from '@/components/common/navbar'
+  export default {
+    name: 'main',
+    data () {
+      return {
+      }
+    },
+    components:{
+      "v-navbar":navbar
     }
-  },
-  components:{
-    "v-navbar":navbar
   }
-}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.container{
-  position: relative;
-  height: auto;
-  overflow: hidden;
-}
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
+  transition: opacity .2s
 }
 .fade-enter, .fade-leave-active {
   opacity: 0

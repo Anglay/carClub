@@ -19,7 +19,7 @@
 			</ul>
 		</div>
 		<div class="nav-footer">
-			<span>退 出</span>
+			<span @click="loginOut">退 出</span>
 			<span>帮 助</span>
 		</div>
 	</div>
@@ -32,6 +32,9 @@
 	  	methods:{
 		    changeSlide:function(){
 		    	this.$emit("changeSlide",!this.slideVisible);
+		    },
+		    loginOut:function(){
+		    	this.$router.push({ path: '/login' });
 		    }
 		}
 	}

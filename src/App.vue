@@ -1,7 +1,11 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <yd-layout>
+    <div id="app">
+      <transition name="fade" mode="out-in">
+        <router-view></router-view>
+      </transition>
+    </div>
+  </yd-layout>
 </template>
 
 <script>
@@ -22,4 +26,11 @@ export default {
   .popup-content{
     background: #399edf;
   }
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 0.25s ease-out;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
+
 </style>
